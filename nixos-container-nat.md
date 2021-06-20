@@ -2,7 +2,7 @@
 date: 2021-06-20T22:31
 ---
 
-# NixOS container NAT
+# Internet access
 
 NAT setup is needed to allow a NixOS container to access the internet.
 
