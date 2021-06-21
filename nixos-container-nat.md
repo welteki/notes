@@ -4,7 +4,7 @@ date: 2021-06-20T22:31
 
 # Internet access
 
-NAT setup is needed to allow a NixOS container to access the internet.
+NAT setup is needed to allow a #[[nixos-containers|NixOS container]] to access the internet.
 
 Add to NixOS configuration:
 ```
