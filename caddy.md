@@ -10,6 +10,6 @@ date: 2020-10-12T00:34
 
 - [Docs](https://caddyserver.com/docs/)
 - [Forum](https://caddy.community/)
-- [[[917ffdd2]]]
+- [[caddy-recipes]]#
 
 [^source]: Cadddy source: [https://github.com/caddyserver/caddy](https://github.com/caddyserver/caddy)
