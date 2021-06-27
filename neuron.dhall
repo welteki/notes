@@ -1,4 +1,4 @@
-{ siteTitle = "Wlteki's Notes"
+{ siteTitle = "Welteki's Notes"
 , author = Some "Han Verstraete"
 , siteBaseUrl = Some "https://notes.welteki.com"
 }
