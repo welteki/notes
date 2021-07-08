@@ -6,11 +6,13 @@
 
   outputs = { self, nixpkgs, utils, neuron }: {
     overlay = final: prev: {
+      neuron = neuron.defaultPackage.${prev.system};
+
       notes = prev.stdenv.mkDerivation {
         pname = "welteki-notes";
         version = "0.0.1";
         src = ./.;
-        buildInputs = [ prev.neuron ];
+        buildInputs = [ final.neuron ];
         buildPhase = ''
           neuron gen --pretty-urls
         '';
@@ -22,14 +24,9 @@
 
   } // utils.lib.eachDefaultSystem (system:
   let
-    neuron-overlay = final: prev: {
-      neuron = neuron.defaultPackage.${system};
-    };
-
     pkgs = import nixpkgs {
       inherit system;
-      # important: neuron-overlay should be applied first
-      overlays = [ neuron-overlay self.overlay ];
+      overlays = [ self.overlay ];
     };
   in
   {
