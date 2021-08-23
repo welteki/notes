@@ -3,9 +3,11 @@
   
   inputs.utils.url   = "github:numtide/flake-utils";
   inputs.neuron.url = "github:srid/neuron";
+  inputs.emanote.url = "github:srid/emanote";
 
-  outputs = { self, nixpkgs, utils, neuron }: {
+  outputs = { self, nixpkgs, utils, neuron, emanote }: {
     overlay = final: prev: {
+      emanote = emanote.defaultPackage.${final.system};
       neuron = neuron.defaultPackage.${prev.system};
 
       notes = prev.stdenv.mkDerivation {
@@ -34,6 +36,7 @@
 
     devShell = pkgs.mkShell {
       buildInputs = [
+        pkgs.emanote
         pkgs.neuron
       ];
     };
