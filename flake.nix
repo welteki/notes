@@ -12,14 +12,15 @@
 
       notes = prev.stdenv.mkDerivation {
         pname = "welteki-notes";
-        version = "0.0.1";
+        version = "0.2.0";
         src = ./.;
-        buildInputs = [ final.neuron ];
+        buildInputs = [ final.emanote ];
         buildPhase = ''
-          neuron gen --pretty-urls
+          mkdir -p .emanote/output
+          emanote gen .emanote/output
         '';
         installPhase = ''
-          cp -r .neuron/output/ $out
+          cp -r .emanote/output/ $out
         '';
       };
     };
