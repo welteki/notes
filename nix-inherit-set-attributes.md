@@ -3,11 +3,11 @@ date: 2021-07-07T17:55
 ---
 
 # Inheriting attributes from a set
-```
+```nix
 inherit (src-set) a b c;
 ```
 is equivalent to
-```
+```nix
 a = src-set.a; b = src-set.b; c = src-set.c;
 ```
 when used while defining local variables in a let-expression or while defining a set.
