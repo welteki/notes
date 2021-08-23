@@ -8,4 +8,4 @@ Some useful caddy configuration recipes
 
 ## Recipes
 
-- [[a7a2e702]]#
+- [[one-acme-cert-for-multiple-sub-domains-in-caddy]]#
