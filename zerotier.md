@@ -1,5 +1,7 @@
 ---
 date: 2021-08-23T13:33
+tags:
+  - toolbox
 ---
 
 # Zerotier
